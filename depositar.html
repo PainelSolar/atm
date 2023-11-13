@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image:url("./img/2.png");
+            background-size: cover;
+            margin-top: 190px;
+            margin-right: 153px;
+        }
+        #Qr {
+            width: 140px;
+        }
+        #sqr{
+            font-size: 15px;
+        }
+        #vqr{
+            font-size: 15px;
+        }
+        #nqr{
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <h1>Depositar</h1>
+
+        <table>
+        
+            <div class = one>
+        <label for="Saldo" id="sqr">Saldo: </label>
+        <input type="text" name="Saldo" id="Saldo" required>
+        <br>
+        <label for="Qr" id="vqr">Valor do deposito: </label>
+        <input type="text" name="Qr" id="Qr" required>
+        <br>  
+            </div>
+            <div class =two>
+        <button type="button" onclick="SR()" >Depositar</button>
+        </div>
+        <div class = three>
+        <label for="Sr" id="nqr">Novo saldo</label> </label>
+        <input type="text" name="Sr" id="Sr">
+        <br>
+        <a href="file:///C:/Users/guilherme/Documents/javaDS/Untitled-1.html"><button>Voltar</button></a> 
+            </div>
+    </table>
+    </fieldset>
+<style> body{
+    background-color: rgb(255, 255, 255);
+    display: block;
+}
+
+label{
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+}
+h1{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+label{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(0, 0, 0);
+    border-radius: 5%;
+}
+input{
+    text-align: center;
+    border-color: rgb(255, 2, 2);
+}
+fieldset{
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-left: 35%;
+    margin-right: 35%;
+    
+
+}
+div{
+    text-align: left;
+}
+</style>
+<script>
+
+
+function SR() {  
+    var Qr = 0.0;  
+    var Saldo = 0.0;
+
+    Qr = document.getElementById("Qr").value;
+    Saldo = document.getElementById("Saldo").value;
+    var sr = parseInt(Qr) + parseInt(Saldo);
+
+    document.getElementById("Sr").value = sr;
+}
+</script>
+</body>
+</html>

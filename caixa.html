@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <h1>Caixa
+            
+        </h1>
+
+        <table>
+        
+            <div class = one>
+        <label for="Altura">Altura: </label>
+        <input type="text" name="Altura" id="Altura" required>
+        <br>
+        <label for="Peso">Peso: </label>
+        <input type="text" name="Peso" id="Peso" required>
+        <br>  
+            </div>
+            <div class =two>
+        <button type="button" onclick="IMC()" >Calcular</button>
+        </div>
+        <div class = three>
+        <label for="Imc">IMC = </label>
+        <input type="text" name="Imc" id="Imc">
+        <br>
+        <label for="Classificação">Classificação = </label>
+        <input type="text" name="Classific" id="Classific">
+            </div>
+    </table>
+    </fieldset>
+<style> body{
+    background-color: rgb(255, 255, 255);
+    display: block;
+}
+
+    label{
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+}
+h1{
+    text-align: center;
+}
+label{
+    text-align: center;
+    background-color: aliceblue;
+    border-color: black;
+    border-radius: 5%;
+}
+input{
+    text-align: center;
+    border-color: black;
+}
+fieldset{
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background-color: rgb(30, 135, 210);
+    border-color: black;
+    border-radius: 10px;
+    margin-left: 35%;
+    margin-right: 35%;
+    
+
+}
+div{
+    text-align: left;
+}
+</style>
+<script>
+
+
+function IMC() {  
+    var Peso = 0.0;
+    var Altura = 0.0;
+    var Classific = "";
+
+    Peso = document.getElementById("Peso").value;
+    Altura = document.getElementById("Altura").value;
+    var imc = Peso / (Altura * Altura);
+
+    if(imc <= 18.5) {
+        Classific = "Magreza";
+    }
+    if(imc>18.5 && imc <= 24.9) {
+        Classific = "Peso normal";
+    }
+    if(imc>24.9 && imc <= 29.9){
+        Classific = "Sobrepeso";
+    } 
+    if(imc> 29.9 && imc <= 34.9) {
+        Classific = "Obesidade grau I";
+    }
+    if(imc>34.9 && imc <= 40) {
+        Classific = "Obesidade grau II";
+    }
+                               
+    if(imc > 40) {
+        Classific = "Obesidade grau III";
+    }
+    document.getElementById("Imc").value = imc;
+    document.getElementById("Classific").value = Classific;
+
+}
+</script>
+</body>
+</html>
+ 
